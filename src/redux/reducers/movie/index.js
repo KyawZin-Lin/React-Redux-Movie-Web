@@ -1,4 +1,4 @@
-import { ActionTypes } from "../actions/action-types";
+import { ActionTypes } from "../../actions/action-types";
 
 const initialState = {
   movies: [],
@@ -17,7 +17,6 @@ export const movieReducer = (state = initialState, { type, payload }) => {
       return { ...initialState, movie: payload };
 
     default:
-      return;
-      state;
+      return state;
   }
 };
