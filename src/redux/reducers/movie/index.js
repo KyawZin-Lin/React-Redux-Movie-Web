@@ -6,7 +6,7 @@ const initialState = {
 };
 
 // export const movieReducer = (state= initialState ,action)=>{
-// i use destruction to action
+// i use destruction to action to get type and payload 
 // }
 export const movieReducer = (state = initialState, { type, payload }) => {
   switch (type) {
