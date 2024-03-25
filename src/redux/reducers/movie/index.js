@@ -1,4 +1,4 @@
-import { ActionTypes } from "../actions/action-types";
+import { ActionTypes } from "../../actions/action-types";
 
 const initialState = {
   movies: [],
@@ -6,7 +6,7 @@ const initialState = {
 };
 
 // export const movieReducer = (state= initialState ,action)=>{
-// i use destruction to action to get type and payload 
+// i use destruction to action
 // }
 export const movieReducer = (state = initialState, { type, payload }) => {
   switch (type) {
@@ -17,7 +17,6 @@ export const movieReducer = (state = initialState, { type, payload }) => {
       return { ...initialState, movie: payload };
 
     default:
-      return;
-      state;
+      return state;
   }
 };
