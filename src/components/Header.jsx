@@ -1,21 +1,20 @@
 import { Navbar } from "flowbite-react";
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Navbar fluid rounded>
-      <Navbar.Brand href="https://flowbite-react.com">
-        <img
+      <Navbar.Brand>
+        {/* <img
           src="../../public/vite.svg"
           className="mr-3 h-6 sm:h-9"
           alt="Flowbite React Logo"
-        />
-        <Link to='/' >
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        /> */}
+          <span onClick={()=>{navigate('/')}} className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             Linn Movies
           </span>
-        </Link>
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
