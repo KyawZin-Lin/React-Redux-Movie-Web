@@ -1,21 +1,14 @@
+import React from 'react'
 import { Card } from "flowbite-react";
-import React from "react";
-import { useNavigate } from "react-router";
-
-const MovieDetails = () => {
-  const navigate = useNavigate();
+import { Link } from "react-router-dom";
+const MovieCard = () => {
   return (
-    <div className="container mx-auto">
-      <div className="">
-        <div className="">
-
-            <span onClick={()=>{navigate('/')}} className=" bg-blue-700 hover:bg-blue-800 rounded  text-center px-2 text-white">Back</span>
-     
-        </div>
+    <div> <Link to="movies/1">
+    <div className="max-w-sm">
         <Card
           className="max-w-sm"
+          imgAlt="Meaningful alt text for an image that is not purely decorative"
           imgSrc="https://newshour-classroom-tc.digi-producers.pbs.org/uploads/images/Oppenheimer-Christopher-Nolan-0-1.width-1024_Kh9HV7C.jpg"
-          horizontal
         >
           <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
             Noteworthy technology acquisitions 2021
@@ -26,8 +19,8 @@ const MovieDetails = () => {
           </p>
         </Card>
       </div>
-    </div>
-  );
-};
+      </Link></div>
+  ) 
+}
 
-export default MovieDetails;
+export default MovieCard
